@@ -22,14 +22,17 @@
             padding: 10px;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 5px;
             padding: 8px 16px;
             border-radius: 4px;
             transition: background-color 0.3s;
+            text-align: center;
+            width: 100%;
         }
         nav a:hover {
             background-color: #003d80;
@@ -46,6 +49,28 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 768px) {
+            nav a {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            main img {
+                max-width: 90%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            header p {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -69,7 +94,7 @@
     <main>
         <h2>医療業界での転職をサポートします</h2>
         <p>私たちは、医療専門職の皆さまが理想の職場を見つけるお手伝いをします。</p>
-         <img src="yabai.jpg" alt="やばい医療キャリアのサポート">
+        <img src="yabai.jpg" alt="やばい医療キャリアのサポート">
     </main>
 
     <footer>
