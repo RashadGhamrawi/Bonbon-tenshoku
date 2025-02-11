@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>看護師募集【即日面接可】- △△病院 | GUPPY</title>
+    <style>
+        :root {
+            --primary-color: #FF4081;
+            --secondary-color: #F8F9FA;
+            --accent-color: #00BCD4;
+            --text-color: #333333;
+            --border-color: #EEEEEE;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+            padding-bottom: 80px;
+        }
+
+        .header {
+            background: white;
+            padding: 0.8rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .quick-actions {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 1rem;
+            z-index: 1000;
+        }
+
+        .quick-button {
+            flex: 1;
+            padding: 1rem;
+            border-radius: 8px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .apply-now {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .chat-now {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .status-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .tag {
+            background: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .tag.urgent {
+            background: #FFE0E0;
+            color: #D32F2F;
+            border-color: #D32F2F;
+        }
+
+        .job-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .notification {
+            background: #FFF3E0;
+            padding: 0.8rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .update-time {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        .facility-images {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            padding: 0.5rem 0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .facility-images::-webkit-scrollbar {
+            display: none;
+        }
+
+        .facility-image {
+            flex: 0 0 280px;
+            height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .info-list li {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .highlight-box {
+            background: #E3F2FD;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .shift-schedule {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .shift-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .shift-table th,
+        .shift-table td {
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        .review-box {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .reviewer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0.5rem;
+            }
+            
+            .job-card {
+                border-radius: 0;
+                margin: 0 -0.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+
+    </header>
+
+    <main class="container">
+        <div class="notification">
+            <span>⚡</span>
+            <span>今日の面接予約可能！オンライン面接にも対応</span>
+        </div>
+
+        <div class="status-tags">
+            <span class="tag urgent">即日面接可</span>
+            <span class="tag">7:1看護体制</span>
+            <span class="tag">年間休日125日</span>
+            <span class="tag">24h保育所あり</span>
+        </div>
+
+        <article class="job-card">
+            <h1>看護師募集【好条件】夜勤手当30円/回</h1>
+            <p class="update-time">更新日時：2025年2月11日 11:45</p>
+
+            <div class="facility-images">
+
+            </div>
+
+            <div class="highlight-box">
+                <h3>おすすめポイント</h3>
+                <ul>
+                    <li>都心の大型総合病院で安定勤務</li>
+                    <li>充実した教育制度と手厚いサポート</li>
+                    <li>残業少なめでワークライフバランス◎</li>
+                </ul>
+            </div>
+
+            <ul class="info-list">
+                <li>
+                    <span>給与</span>
+                    <span>月給3万円〜4万円</span>
+                </li>
+                <li>
+                    <span>夜勤手当</span>
+                    <span>30円/回</span>
+                </li>
+                <li>
+                    <span>勤務時間</span>
+                    <span>日勤4:30-23:00</span>
+                </li>
+                <li>
+                    <span>最寄駅</span>
+                    <span>ボンボン駅徒歩169分</span>
+                </li>
+            </ul>
+        </article>
+
+        <div class="job-card">
+            <h2>シフトスケジュール</h2>
+            <div class="shift-schedule">
+                <table class="shift-table">
+                    <tr>
+                        <th>日勤</th>
+                        <td>4:30-23:00</td>
+                    </tr>
+                    <tr>
+                        <th>夜勤</th>
+                        <td>17:30-13:00</td>
+                    </tr>
+                    <tr>
+                        <th>夜勤回数</th>
+                        <td>月19-20回（応相談）</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="job-card">
+            <h2>先輩看護師の声</h2>
+            <div class="review-box">
+                <div class="review-header">
+                    <div class="reviewer-avatar"></div>
+                    <div>
+                        <h4>内科病棟 太子さん（3年目）</h4>
+                    </div>
+                </div>
+                <p>教育体制が完璧に整っているので、新人の頃から安心して…絶望の一歩を踏み出せました。プリセプターの先輩は鬼のような情熱で「丁寧に」指導してくださり、ミスをするとその場でリアルタイム反省会が始まります。分からないことがあっても、気軽に（心の中で震えながら）質問できる環境です。質問すればするほど、成長痛ならぬ精神痛を実感できるのも魅力のひとつです。</p>
+            </div>
+        </div>
+
+        <div class="job-card">
+            <h2>最近の更新情報</h2>
+            <ul class="info-list">
+                <li>
+                    <span>2025年2月</span>
+                    <span>電子カルテシステム刷新</span>
+                </li>
+                <li>
+                    <span>2025年1月</span>
+                    <span>新人研修プログラム強化</span>
+                </li>
+                <li>
+                    <span>2024年12月</span>
+                    <span>職員寮リニューアル</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="job-card">
+            <h2>現在の応募状況</h2>
+            <div class="notification">
+                <span>📊</span>
+                <span>今週の応募者数：8名（うち面接確定3名）</span>
+            </div>
+            <p>※応募から内定まで最短5日</p>
+        </div>
+    </main>
+
+    <div class="quick-actions">
+        <button class="quick-button apply-now">今すぐ応募</button>
+        <button class="quick-button chat-now">チャットで質問</button>
+    </div>
+</body>
+</html>

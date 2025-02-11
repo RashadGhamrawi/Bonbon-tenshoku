@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>看護師募集 - ボンボン病院 | マイナビメディカル</title>
+    <style>
+        :root {
+            --primary-color: #00A0E9;
+            --secondary-color: #F8F9FA;
+            --accent-color: #FF9900;
+            --text-color: #333333;
+            --border-color: #E5E7EB;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: #FFFFFF;
+        }
+
+        .header {
+            background: white;
+            border-bottom: 2px solid var(--primary-color);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .main-visual {
+            position: relative;
+            height: 300px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .career-path {
+            background: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--primary-color);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem 0;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .medical-note {
+            background: #F8F9FA;
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .interview-section {
+            background: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .interview-content {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .workplace-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .info-table th,
+        .info-table td {
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .info-table th {
+            background: var(--secondary-color);
+            width: 25%;
+        }
+
+        .department-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .skill-development {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .skill-chart {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .skill-box {
+            background: var(--secondary-color);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .certification-path {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .apply-section {
+            text-align: center;
+            padding: 3rem 0;
+            background: var(--secondary-color);
+            margin-top: 2rem;
+        }
+
+        .apply-button {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+
+        .apply-button:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+            }
+
+            .timeline-content {
+                width: 100%;
+                margin: 1rem 0;
+            }
+
+            .interview-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+
+        </div>
+    </header>
+
+    <div class="main-visual">
+        <div class="container">
+            <h1>看護師募集</h1>
+            <p>医療法人社団ボンボン会 ボンボン病院</p>
+            <p>7:1看護体制で質の高い看護を実践できる環境です</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">1</div>
+                <h3>充実の教育制度</h3>
+                <p>プリセプター制度による丁寧な指導と、専門・認定看護師資格取得支援制度があります。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">2</div>
+                <h3>ワークライフバランス</h3>
+                <p>年間休日125日、24時間保育所完備で、働きやすい環境を整えています。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">3</div>
+                <h3>手当が充実</h3>
+                <p>夜勤手当（25,000円/回）をはじめ、各種手当が充実しています。</p>
+            </div>
+        </div>
+
+        <section class="career-path">
+            <h2>キャリアパスのご紹介</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>新人看護師（1年目）</h3>
+                        <ul>
+                            <li>プリセプターによる指導</li>
+                            <li>基本的な看護技術の習得</li>
+                            <li>電子カルテシステムの操作</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>中堅看護師（3〜5年目）</h3>
+                        <ul>
+                            <li>後輩の指導</li>
+                            <li>専門分野の知識・技術の向上</li>
+                            <li>チームリーダーとしての役割</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>ベテラン看護師（6年目以降）</h3>
+                        <ul>
+                            <li>専門・認定看護師への道</li>
+                            <li>病棟運営への参画</li>
+                            <li>看護研究の実施</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skill-development">
+            <h2>スキルアップサポート</h2>
+            <div class="skill-chart">
+                <div class="skill-box">
+                    <h3>専門・認定看護師育成</h3>
+                    <ul>
+                        <li>資格取得支援制度</li>
+                        <li>研修費用補助</li>
+                        <li>勤務調整制度</li>
+                    </ul>
+                </div>
+                <div class="skill-box">
+                    <h3>院内研修プログラム</h3>
+                    <ul>
+                        <li>定期的な技術研修</li>
+                        <li>症例検討会</li>
+                        <li>医療安全研修</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="medical-note">
+                <h4>認定看護師とは</h4>
+                <p>特定の看護分野において、熟練した看護技術と知識を用いて、水準の高い看護実践のできる看護師として、日本看護協会の認定を受けた者を指します。</p>
+            </div>
+        </section>
+
+        <section class="workplace-gallery">
+            <h2>職場環境のご紹介</h2>
+            <div class="gallery-item">
+
+            </div>
+            <div class="gallery-item">
+
+            </div>
+            <div class="gallery-item">
+
+            </div>
+        </section>
+
+        <section class="interview-section">
+            <h2>先輩看護師インタビュー</h2>
+            <div class="interview-content">
+                <p>"インタビュー"</p>
+                <div>
+                    <h3>外科病棟 主任看護師 山田さん（入職8年目）</h3>
+                    <p>「教育体制が充実しているので、新人の頃から安心して看護技術を習得できました。専門・認定看護師を目指す方へのサポートも手厚く、自身のキャリアアップに繋がる環境です。」</p>
+                    <div class="medical-note">
+                        <h4>主任看護師の役割</h4>
+                        <p>病棟の看護業務の管理・調整を行い、スタッフの教育・指導も担当します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="department-info">
+            <h2>看護部門の特徴</h2>
+            <table class="info-table">
+                <tr>
+                    <th>看護体制</th>
+                    <td>7:1看護体制</td>
+                </tr>
+                <tr>
+                    <th>病床数</th>
+                    <td>400床</td>
+                </tr>
+                <tr>
+                    <th>看護師数</th>
+                    <td>280名（2024年2月現在）</td>
+                </tr>
+                <tr>
+                    <th>看護方式</th>
+                    <td>固定チームナーシング</td>
+                </tr>
+            </table>
+        </section>
+
+        <div class="apply-section">
+            <a href="#" class="apply-button">この求人に応募する</a>
+            <p>※応募から内定までの期間：約2〜3週間</p>
+        </div>
+    </main>
+</body>
+</html>

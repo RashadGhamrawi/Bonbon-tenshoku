@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医療事務職員募集【即日面接可】- △△病院 | GUPPY</title>
+    <style>
+        :root {
+            --primary-color: #FF4081;
+            --secondary-color: #F8F9FA;
+            --accent-color: #00BCD4;
+            --text-color: #333333;
+            --border-color: #EEEEEE;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+        }
+
+        .header {
+            background: white;
+            padding: 0.8rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .quick-actions {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 1rem;
+            z-index: 1000;
+        }
+
+        .quick-button {
+            flex: 1;
+            padding: 1rem;
+            border-radius: 8px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .apply-now {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .chat-now {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+            padding-bottom: 80px;
+        }
+
+        .status-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .tag {
+            background: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .tag.urgent {
+            background: #FFE0E0;
+            color: #D32F2F;
+            border-color: #D32F2F;
+        }
+
+        .job-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .facility-images {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            padding: 0.5rem 0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .facility-images::-webkit-scrollbar {
+            display: none;
+        }
+
+        .facility-image {
+            flex: 0 0 280px;
+            height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .info-list li {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .highlight-box {
+            background: #E3F2FD;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .review-box {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .reviewer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: var(--secondary-color);
+        }
+
+        .notification {
+            background: #FFF3E0;
+            padding: 0.8rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .update-time {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0.5rem;
+            }
+            
+            .job-card {
+                border-radius: 0;
+                margin: 0 -0.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+
+    </header>
+
+    <main class="container">
+        <div class="notification">
+            <span>⚡</span>
+            <span>この求人への応募が増えています！本日の応募者数：5名</span>
+        </div>
+
+        <div class="status-tags">
+            <span class="tag urgent">即日面接可</span>
+            <span class="tag">週休2日</span>
+            <span class="tag">残業少なめ</span>
+            <span class="tag">駅チカ</span>
+        </div>
+
+        <article class="job-card">
+            <h1>医療事務職員募集【即日面接可】</h1>
+            <p class="update-time">更新日時：2025年2月11日 10:30</p>
+
+            <div class="facility-images">
+
+            </div>
+
+            <div class="highlight-box">
+                <h3>急募のポイント</h3>
+                <ul>
+                    <li>即日面接・即日内定可能</li>
+                    <li>来週からの勤務も相談可能</li>
+                    <li>引継ぎ期間あり、安心してスタート可能</li>
+                </ul>
+            </div>
+
+            <ul class="info-list">
+                <li>
+                    <span>給与</span>
+                    <span>月給2万円〜3万円</span>
+                </li>
+                <li>
+                    <span>勤務時間</span>
+                    <span>8:30〜23:30</span>
+                </li>
+                <li>
+                    <span>最寄駅</span>
+                    <span>ボンボン駅徒歩169分</span>
+                </li>
+                <li>
+                    <span>勤務開始</span>
+                    <span>即日〜相談可</span>
+                </li>
+            </ul>
+        </article>
+
+        <div class="job-card">
+            <h2>職場の雰囲気</h2>
+            <div class="review-box">
+                <div class="review-header">
+                    <div class="reviewer-avatar"></div>
+                    <div>
+                        <h4>現職員の声</h4>
+                        <p>入職2年目 腹子さん</p>
+                    </div>
+                </div>
+                <p>未経験からスタートしましたが、気づけば魂も経験値も削られていました。先輩方は「丁寧」に（ミスを見逃さず）指導してくださるので、プレッシャーの中でも確実に成長できます。職場の雰囲気は常にピリピリと張り詰めており、緊張感が途切れることはありません。しかし、努力すればたまに「よくやった」と褒められる瞬間があり、その一言のために今日も生き延びています。まるで地獄のような環境ですが、不思議とやりがいだけは感じられる職場です。</p>
+            </div>
+        </div>
+
+        <div class="job-card">
+            <h2>勤務地・アクセス</h2>
+
+            <p>東京都ボンボン区ボンボン町1-2-3<br>
+            まじかよ線「ボンボン駅」徒歩169分</p>
+        </div>
+    </main>
+
+    <div class="quick-actions">
+        <button class="quick-button apply-now">今すぐ応募</button>
+        <button class="quick-button chat-now">チャットで質問</button>
+    </div>
+</body>
+</html>
