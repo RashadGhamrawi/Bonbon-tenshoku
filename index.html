@@ -3,102 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ボンボン医療転職ポータル</title>
+    <title>ボンボンプロトタイピング・ポータル</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
         header {
-            background-color: #007BFF;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
             background-color: #0056b3;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        nav a {
             color: white;
-            text-decoration: none;
-            margin: 5px;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-            text-align: center;
-            width: 100%;
-        }
-        nav a:hover {
-            background-color: #003d80;
-        }
-        main {
             padding: 20px;
-            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
         }
-        footer {
+        .subtitle {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            text-align: left;
+            display: inline-block;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #0056b3;
+        }
+        .footer {
             background-color: #333;
             color: white;
-            text-align: center;
             padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        /* Responsive design adjustments */
-        @media (max-width: 768px) {
-            nav a {
-                width: 100%;
-                box-sizing: border-box;
-            }
-
-            main img {
-                max-width: 90%;
-                height: auto;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.5em;
-            }
-            header p {
-                font-size: 1em;
-            }
+            margin-top: 20px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>ボンボン医療転職ポータル</h1>
-        <p>あなたの医療キャリアの次のステップを見つけましょう</p>
+        ボンボンプロトタイピング・ポータル
     </header>
+    <p class="subtitle">お忙しい中、ご協力ありがとうございます！</p>
 
-    <nav>
-        <a href="doda-nurse-page.html">看護師(Doda)</a>
-        <a href="doda-style-page.html">医療事務(Doda)</a>
-        <a href="guppy-nurse-page.html">看護師（Guppy)</a>
-        <a href="guppy-style-page.html">医療事務（Guppy）</a>
-        <a href="medical-jobchange-nurse.html">看護師（医転）</a>
-        <a href="medical-jobchange-page.html">医療事務（医転）</a>
-        <a href="mynavi-medical-page.html">医療事務（MyNavi）</a>
-        <a href="mynavi-nurse-page.html">看護師（MyNavi）</a>
-    </nav>
+    <div class="section">
+        <h2>プロトタイプ 1</h2>
+        <p><strong>【実施手順】</strong></p>
+        <ol>
+            <li>以下のCareBonusのサイトへアクセスしてください（サイトはプロトタイプです）。</li>
+            <li>サイト内容を確認いただき、 画面右下の「＋」ボタンをクリックし、アンケート①に回答ください。</li>
+            <li>アンケート回答後、画面下部の「ポイント」タブをクリックしてください。</li>
+            <li>画面が切り替わるので、「アンケート回答→ポイント利用」ボタンをクリックし、 アンケート②に回答してください。</li>
+        </ol>
+        <p><strong>プロトタイプサイト画面：</strong> <a href="point_page.html">CareBonus</a></p>
+    </div>
 
-    <main>
-        <h2>医療業界での転職をサポートします</h2>
-        <p>私たちは、医療専門職の皆さまが理想の職場を見つけるお手伝いをします。</p>
-        <img src="yabai.jpg" alt="やばい医療キャリアのサポート">
-    </main>
+    <div class="section">
+        <h2>プロトタイプ 2</h2>
+        <p><strong>【お詫び】</strong></p>
+        <p>プロトタイピング段階のため、検証サイトは「看護師」と「医療事務」の２種です。 <br>
+            ご自身のご職業に合ったプロトタイプにて検証をお願いします。 <br>
+            また、上記２種の職業に該当されない場合は「看護師」を選択してください。</p>
 
-    <footer>
-        &copy; 2025 ボンボン医療転職ポータル（委員長杯）. All rights reserved.
-    </footer>
+        <p><strong>【実施手順】</strong></p>
+        <p>①下記５つのサンプル求人サイトＡ～Ｅへ順番にアクセスし、<br>各サイトの内容をご確認ください。</p>
+        <p>②各サイトを確認いただいた後、以下のアンケート③へ回答ください。<br>アンケートでは５つの求人サイトを比較し、応募意欲を高まると感じた順位付けと、<br>その理由についてお聞きします。</p><br>
+
+         <div class="link-list">
+            <p><strong>・検証用求人サイト（看護師）</strong></p>
+                <a href="doda-nurse-page.html">Ａ：看護師用リンクＡ</a><br>
+                <a href="mynavi-nurse-page.html">Ｂ：看護師用リンクＢ</a><br>
+                <a href="guppy-nurse-page.html">Ｃ：看護師用リンクＣ</a><br>
+                <a href="medical-jobchange-nurse.html">Ｄ：看護師用リンクＤ</a><br>
+        </div>
+
+        <div class="link-list">
+            <p><strong>・検証用求人サイト（医療事務）</strong></p>
+            <a href="doda-style-page.html">Ａ：医療事務用リンクＡ</a><br>
+            <a href="mynavi-medical-page.html">Ｂ：医療事務用リンクＢ</a><br>
+            <a href="guppy-style-page.html">Ｃ：医療事務用リンクＣ</a><br>
+            <a href="medical-jobchange-page.html">Ｄ：医療事務用リンクＤ</a><br>
+        </div>
+
+      <p></p>
+         <br><p><strong>アンケートサイトURL：</strong> <a href="https://forms.gle/PUit9rTXSfaae18q6">ここをクリックだよん</a></p>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 ボンボンプロトタイピング・ポータル（委員長杯）. All rights reserved.
+    </div>
 </body>
 </html>
